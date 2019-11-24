@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Bug Bounty</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{% static 'css/animate-wow.css' %}">
+      <!--main css-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   </head>
+   <body>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+
+
+      </header>
+      <!-- Modal -->
+
+
+      <div class="product-page-main">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="prod-page-title">
+                     <h2>{{item.link}}</h2>
+
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="col-md-7 col-sm-8">
+                  <div class="md-prod-page">
+                     <div class="md-prod-page-in">
+                        <div class="page-preview">
+
+                     <div class="description-box">
+                        <div class="dex-a">
+                           <h4>Description</h4>
+                           <p>{{item.description}}
+                           </p>
+                           <br>
+                             <p>Link: {{item.scope_link}}</p>
+
+                        </div>
+                        <div class="dex-a">
+                           <h4>In Scope</h4>
+                           <p>{{item.scope_description}}
+                           </p>
+                           <br>
+                           <p></p>
+                         <p></p>
+                        </div>
+                        <div class="dex-a">
+                           <h4>Out Scope</h4>
+                           <p>{{item.outscope_description}}
+                           </p>
+                           <br>
+                           <p></p>
+                         <p></p>
+                        </div>
+                        <div class="spe-a">
+                           <h4>Bounty Criteria</h4>
+
+                           <ul>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>P1</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{item.P1}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>P2</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{item.P2}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>P3</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{item.P3}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>P4</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{item.P4}}</p>
+                                 </div>
+                              </li>
+
+
+                              </li>
+                           </ul>
+                           <br>
+                           <br>
+                           <div class="dex-a">
+                             <h3>Submit your bug report here </h3>
+                             <p> You will given points according to your report </p>
+                           </div>
+                       </div>
+                     </div>
+                  </div>
+
+      <footer>
+
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <p> All Rights Reserved. CyberImposters © 2019</p>
+                  </div>
+                  <div class="col-md-4">
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--main js-->
+      <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+      <!--bootstrap js-->
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script>
+      <script src="{% static 'js/select2.full.min.js' %}"></script>
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!--custom js-->
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+
+
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{%static 'css/style1.css' %}">
+</head>
+<body bgcolor="black">
+<H1><u> Hello Hacker! TO join find the flag</u></h1>
+
+<form class="" method="post"> {% csrf_token %}
+<div class="login">
+  <p> Test Here</p>
+  <input type="text" class="fake" placeholder="Username"> <br>
+  <input type="text" class="fake" placeholder="Password"> <br>
+  <button class="button button2" type="submit">Go</button> <br>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  Hints:-
+<br>
+<br>
+
+  1. SQL injections are not that old
+  <br>
+  2. XSS ? what?
+  <br>
+  3. some IP is given there but  i don't know networking :-(
+  <br>
+  4. hint from n00b - <b> START FROM BASICS </b>
+</div>
+</form>
+
+
+
+
+
+
+
+
+
+<form action="check_flag" method="post">
+  {% csrf_token %}
+  <div class="footer">
+<input type="text" class="flag" name="flag" placeholder="SuBmIt YoUr FlAg HeRe">
+  <button class="button button1">Check</button>
+</form>
+  <p class="side">IP: 10.10.43.13</p>
+  </div>
+</body>
+</html>

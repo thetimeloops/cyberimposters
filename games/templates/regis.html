@@ -1,0 +1,304 @@
+<html>
+<head>
+<title>.: Sign Up :.</title>
+	<link rel = "icon" href ="logo.png"type = "image/x-icon">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+
+});
+</script>
+<script type="text/javascript">
+  function valdt() {
+var x=document.getElementById("psw").value;
+var y=document.getElementById('psw_conf').value;
+var a=document.getElementById('val_number').value;
+
+if(x!=y){
+  alert("Confirm password id not same as pasword entered");
+  window.location.href="signup.html";
+  }
+if(a.length!=10 || Number.isInteger(parseInt(a))==false) {
+  alert("Phone Number is not correct");
+  window.location.href="signup.html";
+}
+}
+</script>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+  body{
+background-color: black;
+width: auto;
+height: auto;
+  }
+	input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+font-family: 'Hepta Slab', serif;
+}
+input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+font-family: 'Hepta Slab', serif;
+}
+select {
+  width: 30%;
+  padding: 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+font-family: 'Hepta Slab', serif;
+}
+input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Hepta Slab', serif;
+}
+
+
+.btn.btn-outline-primary{
+	width: 40%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+._hep{
+margin:15px;
+font-size: 30px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+._fnt{
+margin: 15px;
+font-size: 20px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+.email_bad{
+font-family: 'Hepta Slab', serif;
+font-size: 15px;
+color:red;
+	}
+
+@media only screen and (max-width:760px){
+
+.center { /* top logo css */
+  display: block;
+  width: auto;
+  height:60px;
+  margin-left: none;
+  margin-right: auto;
+}
+.nav_img{
+	display: inline-block;
+  width: auto;
+  height:30px;
+  margin-left: auto;
+  margin-right: none;
+}
+
+.doc{
+width:auto;
+height:auto;
+border-radius:20px;
+background:rgb(133, 161, 141);
+margin-top: 40px;
+  margin:5px;
+  padding: 20px;
+  display:inline-block;
+}
+.login{
+width:auto;
+height:auto;
+border-radius: 20px;
+background:rgb(15,20,26);
+margin-top:50px;
+margin-bottom:70%;
+margin-left:10px;
+margin-right:10px;
+padding: 20px;
+
+display:block;
+}
+._hep{
+font-size: 25px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+._fnt{
+font-size: 20px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+hr{
+	display:block;
+	  margin-top: 100px;
+    margin-bottom: 0px;
+    margin-right:auto;
+    margin-left:auto;
+	border-style: inset;
+	border-width: 1px;
+}
+.dwn_fnt{
+	margin:10px;
+	font-size: 12px;
+	font-family: 'Hepta Slab', serif;
+  color:rgb(242, 242, 242);
+}
+}
+@media only screen and (min-width:761px){
+
+.center { /* top logo css */
+  display: block;
+  margin-left: none;
+  margin-right: auto;
+  width: auto;
+  height:80px;
+}
+.nav_img{
+	display: inline-block;
+  width: auto;
+  height:30px;
+  margin-left: auto;
+  margin-right: none;
+}
+
+.doc{
+width:40%;
+height:auto;
+border-radius:20px;
+background:rgb(133, 161, 141);
+margin-top: 40px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom:5px;
+  padding: 20px;
+  display:inline-block;
+}
+.login{
+width:42%;
+height:auto;
+border-radius: 20px;
+background:rgb(15,20,26);
+margin-top: 5%;
+margin-left: 30%;
+margin-right: 28%;
+margin-bottom:18%;
+padding: 20px;
+display:inline-block;
+}
+._hep{
+font-size: 30px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+._fnt{
+font-size: 20px;
+font-family: 'Hepta Slab', serif;
+color:rgb(242, 242, 242);
+}
+}
+hr{
+	display:block;
+	margin-top: 6%;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+.dwn_fnt{
+	font-size: 12px;
+	font-family: 'Hepta Slab', serif;
+  color:rgb(242, 242, 242);
+}
+}
+</style>
+
+</head>
+<body ng-app="myApp">\
+<div class="login">
+
+    <p class="_hep" align="center">{{suc}} </p>
+		<form action="/games/regis" method="post" name="myForm"id="sinup" ng-controller="validateCtrl"> {%csrf_token%}
+        <p class="_hep" align="center">Register Here For {{title_game}} </p>
+        <input type="text" name="name" ng-model="user" id="sinup_nam" value="" placeholder="Name"  >
+        <input type="text" name="phone" ng-model="user1" id="sinup_nam" value="" placeholder="Phone Number"  >
+
+
+
+        <input type="email"name="email"id="val_email" placeholder="Email"  ng-model="email" required>
+        <span ng-show="myForm.email.$dirty && myForm.email.$invalid" class="email_bad"id="email_bad">
+          <span ng-show="myForm.email.$error.required">Email is required.</span>
+                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                </span>
+
+
+
+         <div class="form-check">
+<select name="type_team">
+  <option>TYPE</option>
+  <option>SOLO</option>
+  <option>TEAM</option>
+
+</select>
+</div>
+
+
+<div class="form-check">
+<select name="year_game">
+<option>YEAR</option>
+<option>First</option>
+<option>Second</option>
+<option>Third</option>
+<option>Fourth</option>
+
+</select>
+</div>
+
+        <center><!--<input type="submit" value="Sign Up!">-->
+          <button type="submit" id="mysubmit"class="btn btn-outline-Light" onclick="valdt()"ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.password.$dirty && myForm.password.$invalid">Register Me</button>
+        </center>
+
+    </form>
+
+	</div>
+	<hr>
+	<p class="dwn_fnt"></p>
+
+</body>
+</html>
+</html>

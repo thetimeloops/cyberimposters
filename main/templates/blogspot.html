@@ -1,0 +1,123 @@
+{%block content%}
+{%load static%}
+
+<!--
+<div class="w3-row-padding">
+	{%for item in myposts %}
+	<div class="w3-third w3-blue">
+<p >Posted on {{item.pub_date}}</p>
+  <p class="_hep"	><b></b>&nbsp;&nbsp;&nbsp;{{item.title}} </p>
+<p class="xyz">  <a href="blogpost/{{item.post_id}}">SOLVE</a></p>
+{% if flagfound %}
+<p class="_hep"	><b></b>&nbsp;&nbsp;&nbsp;Congrats you found a flag </p>
+{% endif %}
+</div>
+{%endfor%}
+</div>
+{%endblock%}
+</body>
+</html>
+-->
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>bug</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{% static 'css/animate-wow.css' %}">
+      <!--main css-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   </head>
+   <body>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+
+      </header>
+      <!-- Modal -->
+
+
+
+      <div class="page-content-product">
+         <div class="main-product">
+            <div class="container">
+               <div class="row clearfix">
+                  <div class="find-box">
+                     <h1><br></h1>
+                     <h4></h4>
+                     <div class="product-sh">
+                        <div class="col-sm-6">
+                           <div class="form-sh">
+
+                           </div>
+                        </div>
+
+
+                  </div>
+               </div>
+
+               <div class="row clearfix">
+
+                  <div class="">
+										<form action = "{{post.post_id}}" method="POST"> {% csrf_token %}
+                        <div class="box">
+													<div class="box-img">
+													
+												<right>	<font color="cyan">posted at {{post.pub_date}}</font></right>
+													<br>
+													<br>
+													<font color="white"> <h1>{{post.title}}</h1></font>
+													 <h4>Hints :  <br> {{post.habody}} </h4>
+													 <a href={{post.body}} target="_blank">Click here to Download CTF file</a>
+													 <br>
+													 <input type="text" name="flag" placeholder="submit flag">
+													 <input type="submit">
+                           <!--<img src="{% static 'images/product/1.png' %}" alt="" /> -->
+                        </div>
+											</form>
+
+                  </div>
+                     </a>
+
+                  </div>
+
+                  <div class="categories_link">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <p> CyberImposters © 2019</p>
+                  </div>
+                </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--main js-->
+      <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+      <!--bootstrap js-->
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script>
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!--custom js-->
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>
