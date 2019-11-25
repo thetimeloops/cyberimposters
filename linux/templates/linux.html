@@ -75,21 +75,24 @@
 
     <!-- ##### Games Area Start ##### -->
     <div class="games-area section-padding-100-0">
+  {% for post in mypost %}
         <div class="container">
+
             <div class="row">
 
-                  <h2> Why linux is better than windows?</h2>
+                  <h2>{{post.title}}</h2>
 
                 <div class="col-12 col-md-4">
-<img src="{% static 'img/bg-img/blog1.png' %}" alt="" height="500" width="500">
+<img src="/up_images/{{post.blog_pic}}/" alt="" height="500" width="500">
                     <div class="single-games-area text-center mb-100 wow fadeInUp" data-wow-delay="100ms">
 
 
-                        <a href="#" class="btn egames-btn mt-30">Read More</a>
+                        <a href="bloglinux/{{post.post_id}}" class="btn egames-btn mt-30">Read More</a>
                     </div>
                 </div>
 </div>
         </div>
+        {%endfor%}
     </div>
 
 

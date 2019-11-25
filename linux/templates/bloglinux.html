@@ -32,13 +32,13 @@
 
     <!-- ##### Header Area Start ##### -->
 
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url({% static 'img/bg-img/blog1.png' %});">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/up_images/{{post.blog_pic}}/);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
                 <div class="col-12">
                     <div class="breadcrumb-text">
-                        <h2>Why linux is better than windows?</h2>
+                        <h2>{{post.title}}</h2>
                     </div>
                 </div>
             </div>
@@ -58,13 +58,13 @@
                                 <img src="img/bg-img/24.jpg" alt="">
                             </div>
                             <div class="blog-content">
-                                <h4 class="post-title">Why linux is better than windows?</h4>
+                                <h4 class="post-title">{{post.title}}</h4>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam.Aenean ut eros in ligula mollis lacinia eu in metus. In diam leo, convallis id nisi sed, mollis malesuada arcu. Aenean nisi tellus, posuere quis quam nec, mattis tempor dui. Suspendisse non ante mollis, fermentum erat non, fermentum neque. Phasellus vulputate, odio sit amet rhoncus interdum, est est condimentum velit, non condimentum lectus sapien id ante. Nullam sed quam hendrerit, cursus augue at, ultricies erat. Nulla sed pharetra ligula.</p>
+                                <p>{{post.para1}}</p>
 
-                                <p>n vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
+                                <p>{{post.para2}}</p>
 
-                                <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce ultricies ante tortor, non vestibulum est feugiat ut.</p>
+                                <p>{{post.para3}}</p>
 
                                 <div class="row mt-50">
                                     <div class="col-6">
@@ -77,7 +77,7 @@
                             </div>
                         </div>
 
-                
+
 
 
     <!-- jQuery-2.2.4 js -->
