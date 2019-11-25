@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'bug',
     'games',
+    'linux',
 ]
 
 MIDDLEWARE = [
