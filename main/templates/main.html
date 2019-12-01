@@ -34,6 +34,11 @@ function gaming()
 {
   window.location.href="/games";
 }
+
+function linux()
+{
+  window.location.href="/linux";
+}
 </script>
 </head>
 
@@ -53,19 +58,22 @@ function gaming()
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">CTF Challanges</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio"></a>
           </li>
+          <!--
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">LeaderBoard</a>
           </li>
+
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Linux</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Profile</a>
+          </li>
+        -->
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Logout</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Crypto</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Gaming</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Report a problem</a>
           </li>
         </ul>
       </div>
@@ -93,7 +101,7 @@ function gaming()
       </div>
 
       <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">we are here to save world</p>
+      <p class="masthead-subheading font-weight-light mb-0">World in safe hands</p>
 
     </div>
   </header>
@@ -137,7 +145,7 @@ function gaming()
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/cabin.png' %}" alt="">
+            <img class="img-fluid" src="{% static 'img/portfolio/crypto.png' %}" alt="">
           </div>
         </div>
 
@@ -196,13 +204,14 @@ function gaming()
   </section>
 
   <!-- About Section -->
+  <!--
   <section class="page-section bg-secondary text-white mb-0" id="about">
     <div class="container">
 
-      <!-- About Section Heading -->
+
       <h2 class="page-section-heading text-center text-uppercase text-white">LeaderBoard</h2>
 
-      <!-- Icon Divider -->
+
       <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
@@ -211,7 +220,7 @@ function gaming()
         <div class="divider-custom-line"></div>
       </div>
 
-      <!-- About Section Content -->
+
       <div class="row">
         {% for item in myposts%}
         <div class="col-lg-4 ml-auto">
@@ -220,16 +229,19 @@ function gaming()
 
         </div>
         <div class="col-lg-4 ml-auto">
-          <p class="lead"><u>Rank</u></p>
-          <p class="lead">{{item.id}}</p>
+          <p class="lead"><u>Points</u></p>
+          <p class="lead">{{item.points}}</p>
 
         </div>
+
         <div class="col-lg-4 ml-auto">
           <p class="lead"><u>Position</u></p>
-          <p class="lead">Pro</p>
+{% if item.points >= item.avg_points %}
+          <p class="lead">Noob</p>
+
 
         </div>
-
+{% endif %}
 
 
         {%endfor%}
@@ -239,14 +251,14 @@ function gaming()
 
     </div>
   </section>
-
+-->
 
 
 
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>&copy; Cyberonites 2019</small>
+      <small>&copy; CyberImposters 2019</small>
     </div>
   </section>
 
@@ -274,7 +286,7 @@ function gaming()
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">CTF Challanges</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">CTF CHALLENGES</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -313,7 +325,7 @@ function gaming()
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Crypto Challanges</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Crypto CHALLENGES</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -323,7 +335,7 @@ function gaming()
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/cake.png" alt="">
+                <img class="img-fluid rounded mb-5" src="{% static 'img/portfolio/crypto.png' %}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Solve the crypto questions and get rewarded.</p>
                 <button class="btn btn-primary" href="#" onclick="Crypto()">
@@ -365,7 +377,7 @@ function gaming()
                 <img class="img-fluid rounded mb-5" src="img/portfolio/linux.png" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Practice linux</p>
-                <button class="btn btn-primary" href="#" onclick="linux">
+                <button class="btn btn-primary" href="#" onclick="linux()">
                 <!--  <i class="fas fa-times fa-fw"></i> -->
                   Enter Contest
                 </button>
@@ -391,7 +403,7 @@ function gaming()
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Gaming Challanges</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Gaming CHALLENGES</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -430,7 +442,7 @@ function gaming()
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Coding Challanges</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Coding CHALLENGES</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>

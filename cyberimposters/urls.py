@@ -24,4 +24,5 @@ urlpatterns = [
     path('bug/',include('bug.urls')),
     path('games/',include('games.urls')),
     path('linux/',include('linux.urls')),
+    path('account_profile/',include('account_profile.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

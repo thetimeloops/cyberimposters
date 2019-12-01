@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+
 def index(request):
     return render(request,"index.html")
 
@@ -76,16 +77,17 @@ def blog(request):
 
 @login_required(login_url='/login1')
 def blogpost(request, id):
-    user__ = request.user
-    user = exclusive.objects.filter(username=user__)
     post = Blogspot.objects.filter(post_id = id)[0]
 
     if request.method == "POST":
-        print(user)
+        point_temp =0
         flag1 = request.POST.get('flag','')
         if(flag1 == post.flags):
-            post.is_solved = True
+            point = exclusive.objects.update(points= point_temp+10)
+
             return redirect("blog")
+        else:
+            return render(request, 'blogspot.html', {'post':post})
     return render(request, 'blogspot.html', {'post':post})
 
 @login_required(login_url='/login1')

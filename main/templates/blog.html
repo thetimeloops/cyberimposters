@@ -22,7 +22,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <title>bug</title>
+      <title>CTfs</title>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!--enable mobile device-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,10 +40,33 @@
       <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
    </head>
    <body>
-      <header id="header" class="top-head">
-         <!-- Static navbar -->
+     <header id="header" class="top-head">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-4 col-sm-12 left-rs">
 
-      </header>
+                     </div>
+                     <div class="col-md-8 col-sm-12">
+                        <div class="right-nav">
+                           <div class="login-sr">
+                              <div class="login-signup">
+                                 <ul>
+                                   <li><a class="custom-b" href="/contact">Report a bug!</a></li>
+                                    <li><a class="custom-b" href="#">Go Back</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--/.container-fluid -->
+            </nav>
+         </header>
       <!-- Modal -->
 
 
@@ -74,7 +97,7 @@
 													{% if item.is_solved %}
 													<i><h4>solved</h4></i>
 													{% endif %}
-													<small>posted at {{item.pub_date}}</small>
+													<small>posted on {{item.pub_date}}</small>
                            <u><h4>CTF name</h4></u>
 													 <h1>{{item.title}}</h1>
 													 <br><br><br><br>
