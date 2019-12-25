@@ -115,7 +115,7 @@ def check_flag_blog(request):
     print(check_flag_var.flags)
     if Blogspot.objects.filter(flags = flag1).exists():
         flagfound=True
-        return redirect("blog")
+        return render(request,"blog.html",flagfound)
     else:
 
         return HttpResponse("<script>alert('try AGain')</script>")
