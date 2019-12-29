@@ -51,7 +51,7 @@
       <a class="nav-link" href="/blog">Back<span class="sr-only"></span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Leaderboard</a>
+      <a class="nav-link" href="/profile">Leaderboard</a>
     </li>
 
   </ul>
@@ -62,9 +62,51 @@
 </div>
 </nav>
 <br>
-<br>
-<br>
-<br>
+
+
+
+
+
+<div class="card">
+
+  <div class="card-header">
+    <h2>{{post.title}}</h2>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><u>HINTS</u></p>
+    <blockquote class="blockquote mb-0">
+      <p>{{post.habody}}</p>
+      <p>{{post.hint}}</p>
+      <p>{{post.hint2}}</p>
+
+      <form class="form-inline" action="{{post.post_id}}" method="POST"> {% csrf_token %}
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="flag" class="sr-only">Flag</label>
+          <input type="text" class="form-control" id="" name="flag" placeholder="Flag">
+        </div>
+
+      	<div class="card-body">
+
+      		<button type="submit" class="btn btn-primary mb-2">Submit Flag</button>
+      		&nbsp;&nbsp;
+          <a href="{{post.body}}" target="_blank" class="card-link">Download CTF File</a>
+        </div>
+
+
+      </form>
+
+
+      <footer class="blockquote-footer">posted on  <cite title="Source Title">{{post.pub_date}}</cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+
+
+
+
+
+<!--
 
 <center>
 <div class="card" style="width: 18rem;">
@@ -98,6 +140,7 @@
 
 </center>
 
+-->
 <!--
 <div class="login">
 

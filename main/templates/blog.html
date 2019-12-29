@@ -52,7 +52,7 @@
       <a class="nav-link" href="/main">Home <span class="sr-only"></span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Leaderboard</a>
+      <a class="nav-link" href="/profile">Leaderboard</a>
     </li>
 
   </ul>
@@ -64,8 +64,12 @@
 </nav>
 
 <br>
-<br>
-<br>
+{% if flagfound1 %}
+<div class="alert alert-danger" role="alert">
+  Try Again
+</div>
+{% endif %}
+
 
 <table class="table">
   <thead class="thead-dark">
@@ -79,13 +83,14 @@
 
   {%for item in myposts%}
   <tbody>
+    {% if item.is_solved != True %}
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{item.serial}}</th>
       <td>{{item.title}}</td>
       <td>{{item.cat}}</td>
       <td><a href="blogpost/{{item.post_id}}">Solve</a></td>
     </tr>
-
+    {%endif%}
   </tbody>
   {%endfor%}
 </table>

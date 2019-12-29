@@ -4,6 +4,7 @@ from django.db import models
 
 class Blogspot(models.Model):
     post_id = models.AutoField(primary_key=True)
+    serial = models.CharField(max_length=10,default="")
     title = models.CharField(max_length=200)
     habody = models.CharField(max_length=200 , default="")
     hint = models.CharField(max_length=200 , default="")
