@@ -41,7 +41,7 @@
             margin: 0,
             loop: true,
             nav: true,
-            navText: ['Prev Game', 'Next Game'],
+            navText: ['', ''], 
             dots: false,
             autoplay: true,
             autoplayTimeout: 7000,

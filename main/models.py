@@ -12,6 +12,7 @@ class Blogspot(models.Model):
     body = models.CharField(max_length=5000, default="")
     flags = models.CharField(max_length=200,default="")
     cat = models.CharField(max_length=200,default="")
+    points = models.CharField(max_length=50 , default="")
     pub_date = models.DateField()
     is_solved = models.BooleanField(default=False)
 
@@ -24,12 +25,13 @@ class exclusive(models.Model):
     email = models.CharField(max_length=30)
     phone = models.CharField(max_length=11)
     gender = models.CharField(max_length=30)
-    points = models.CharField(max_length=10,default="")
+    points = models.CharField(max_length=10,default="0")
     password = models.CharField(max_length=50,default="")
     low_points = models.CharField(max_length=10,default="10")
     try_points = models.CharField(max_length=10,default="50")
     avg_points = models.CharField(max_length=10,default="150")
     pro_points = models.CharField(max_length=10,default="300")
     master_points = models.CharField(max_length=10,default="500")
+    is_normal = models.BooleanField(default=True)
     def __str__(self):
         return self.username

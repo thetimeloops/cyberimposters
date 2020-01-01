@@ -79,6 +79,7 @@
 
   {%for item in myposts%}
   <tbody>
+    {% if item.is_normal%}
     <tr>
       <th scope="row">#</th>
       <td>{{item.username}}</td>
@@ -86,9 +87,18 @@
       {% if item.points <= item.low_points%}
       <td>Noob</td>
       {% elif item.points > item.low_points and item.points <= item.try_points%}
-      <td>Rookie</td>
+      <td>amateur</td>
+      {% elif item.points > item.try_points and item.points <= item.avg_points%}
+      <td>Intermediate</td>
+      {% elif item.points > item.avg_points and item.points <= item.pro_points%}
+      <td>Pro</td>
+      {% elif item.points > item.pro_points and item.points <= item.master_points%}
+      <td>Master</td>
+      {% elif item.points > item.master_points%}
+      <td>Expert</td>
       {%endif%}
     </tr>
+    {%endif%}
 </tbody>
   {%endfor%}
 </table>

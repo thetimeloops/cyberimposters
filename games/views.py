@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import game_regis , about_game
+from .models import game_regis , about_game , winner
 # Create your views here.
 
 def index(request):
     games = about_game.objects.all()
-    return render(request,"games.html",{'games':games})
+    win = winner.objects.all()
+    return render(request,"games.html",{'games':games,'win':win})
 
 
 def regis(request):

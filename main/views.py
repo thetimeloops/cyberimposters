@@ -83,10 +83,9 @@ def blogpost(request, id):
     if request.method == "POST":
         flag1 = request.POST.get('flag','')
         if(flag1 == post.flags):
-            info.points = int(info.points) + 10
+            info.points = int(info.points) + int(post.points)
             info.save()
-            post.is_solved=True
-            post.save()
+            post=post.as_hidden()
             return redirect(blog)
         else:
             return render(request, 'blogspot.html', {'post':post})
