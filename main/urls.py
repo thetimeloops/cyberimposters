@@ -11,7 +11,7 @@ urlpatterns = [
     path("blogpost/<int:id>", views.blogpost, name="blogHome"),
     path("check_flag",views.check_flag,name="check_flag"),
     path('profile',views.profile,name="profile"),
-
-
+    path('alerts',views.alerts,name="alert"),
+    path('logout',views.logout,name="logout")
 
 ]

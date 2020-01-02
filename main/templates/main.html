@@ -40,6 +40,33 @@ function linux()
   window.location.href="/linux";
 }
 </script>
+<style>
+
+.notification {
+  background-color: rgb(26,188,156);
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification:hover {
+  background: rgb(44,62,80);
+  color: white;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: rgb(19,31,45);
+  color: white;
+}
+</style>
 </head>
 
 
@@ -69,12 +96,14 @@ function linux()
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Profile</a>
           </li>
         -->
+        <a href="/alerts" class="notification">
+  <span>Notifications</span>
+  <span class="badge">{{count}}</span>
+</a>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Logout</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Report a problem</a>
-          </li>
+
         </ul>
       </div>
     </div>

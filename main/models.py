@@ -35,3 +35,11 @@ class exclusive(models.Model):
     is_normal = models.BooleanField(default=True)
     def __str__(self):
         return self.username
+
+
+class notification(models.Model):
+    pub_date = models.DateField()
+    body = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.body

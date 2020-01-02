@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
-from .models import Blogspot , exclusive
+from .models import Blogspot , exclusive , notification
 from django.contrib.auth.models import User , auth
 from django.contrib import auth
 from django.contrib.auth import authenticate, logout, login
@@ -14,7 +14,7 @@ def index(request):
 @login_required(login_url='/login1')
 def check_flag(request):
     flag = request.POST.get('flag')
-    if flag == "^FLAG^as&97ejldsjfjlsdjlkfaklkasd$":
+    if flag == "w0rld 1n s4fe h4nd5":
         return render(request,"exclusive.html")
     else:
         return redirect("/")
@@ -67,8 +67,8 @@ def signup(request):
 
 @login_required(login_url='/login1')
 def main(request):
-    myposts = exclusive.objects.all()
-    return render(request,"main.html",{'myposts':myposts})
+    count = notification.objects.all().count()
+    return render(request,"main.html",{'count':count})
 
 @login_required(login_url='/login1')
 def blog(request):
@@ -90,6 +90,18 @@ def blogpost(request, id):
         else:
             return render(request, 'blogspot.html', {'post':post})
     return render(request, 'blogspot.html', {'post':post})
+
+login_required(login_url='/login1')
+def alerts(request):
+    noti = notification.objects.all()
+    count = notification.objects.all().count()
+    return render(request,"alert.html",{'noti':noti})
+
+
+@login_required(login_url='/login1')
+def logout(request):
+    auth.logout(request)
+    return redirect("/")
 
 
 
