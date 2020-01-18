@@ -75,6 +75,8 @@ def blog(request):
     myposts = Blogspot.objects.all()
     return render(request, 'blog.html', {'myposts': myposts})
 
+ctf_id=[]
+
 @login_required(login_url='/login1')
 def blogpost(request, id):
     post = Blogspot.objects.filter(post_id = id)[0]
@@ -85,8 +87,10 @@ def blogpost(request, id):
         if(flag1 == post.flags):
             info.points = int(info.points) + int(post.points)
             info.save()
-            post=post.as_hidden()
-            return redirect(blog)
+            ctf_id.append(id)
+            print(ctf_id)
+            return redirect("blog")
+
         else:
             return render(request, 'blogspot.html', {'post':post})
     return render(request, 'blogspot.html', {'post':post})

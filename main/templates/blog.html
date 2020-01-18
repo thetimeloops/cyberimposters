@@ -84,15 +84,19 @@
 
   {%for item in myposts%}
   <tbody>
-    {% if item.is_solved != True %}
+
     <tr>
       <th scope="row">{{item.serial}}</th>
       <td>{{item.title}}</td>
       <td>{{item.cat}}</td>
       <td>{{item.points}}</td>
+      {% if hide %}
+      <td>solved</td>
+      {% else %}
       <td><a href="blogpost/{{item.post_id}}">Solve</a></td>
+      {%endif%}
     </tr>
-    {%endif%}
+    
   </tbody>
   {%endfor%}
 </table>

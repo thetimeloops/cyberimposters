@@ -1,3 +1,4 @@
+<!--
 <html>
 <head>
 <title>.: Sign Up :.</title>
@@ -5,7 +6,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -251,7 +252,7 @@ hr{
 </head>
 <body ng-app="myApp">\
 <div class="login">
-	<p class="_hep" align="center">{{err}}</p>
+
 		<form action="signup" method="post" name="myForm"id="sinup" ng-controller="validateCtrl"> {%csrf_token%}
         <p class="_hep" align="center">Create an account</p>
         <input type="text" name="name" ng-model="user" id="sinup_nam" value="" placeholder="Your Name (optional)"  >
@@ -279,7 +280,7 @@ hr{
   <option>Other</option>
 </select>
 </div>
-        <center><!--<input type="submit" value="Sign Up!">-->
+        <center>
           <button type="submit" id="mysubmit"class="btn btn-outline-Light" onclick="valdt()"ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.password.$dirty && myForm.password.$invalid">Sign Up</button>
         </center>
 
@@ -291,4 +292,250 @@ hr{
 
 </body>
 </html>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>REGISTRATION</title>
+
+
+<style>
+
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+	background: url("/static/img/background.jpg") no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	image-rendering: crisp-edges;
+}
+.login-box{
+	width: 500px;
+	position: absolute;
+	top: 40%;
+	left: 65%;
+	transform: translate(-50%,-50%);
+	color: white;
+}
+.login-box h1{
+	float: left;
+	font-size: 40px;
+	border-bottom: 3px solid #008B8B;
+	margin-bottom: 50px;
+	padding: 5px 0
+}
+.textbox{
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid #008B8B;
+}
+.textbox i{
+	width: 30px;
+	float: left;
+	text-align: center;
+}
+.textbox input{
+	border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: 15px;
+	width: 80%;
+	float: left;
+	margin: 0 10px;
+}
+.btn{
+	width: 100%;
+	background: none;
+	border: 2px solid #008B8B;
+	color: white;
+	padding: 8px;
+	font-size: 25px;
+	cursor: pointer;
+	margin: 12px 0;
+	transition: all 1.0s;
+	position: relative;
+}
+
+.login-box {
+	text-shadow: 0 0 15px #A6ACAF;
+}
+
+.drop{
+
+}
+
+
+</style>
+
+
+
+<body>
+<div class="login-box">
+<h1><b> REGISTRATION  </b></h1>
+
+<form action="signup" method="post"> {% csrf_token %}
+
+<div class ="textbox">
+	<p class="_hep" align="center">{{err}}</p>
+<i class="fa fa-user-secret" aria-hidden="true"></i>
+<input type="text" placeholder="NAME" name ="name" value="">
+</div>
+<div class ="textbox">
+<i class="fa fa-telegram" aria-hidden="true"></i>
+<input type="text" placeholder="TELEGRAM USERNAME" name ="username" value="">
+</div>
+<div class ="textbox">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+<input type="email" placeholder="EMAIL-ID" name ="email" value="">
+</div>
+<div class ="textbox">
+<i class="fa fa-phone" aria-hidden="true"></i>
+<input type="text" placeholder="PHONE NUMBER" name ="number" value="">
+</div>
+
+<div class ="textbox">
+<i class="fa fa-key" aria-hidden="true"></i>
+<input type="password" placeholder="PASSWORD" name ="password" value="">
+</div>
+
+<div class ="textbox">
+<i class="fa fa-key" aria-hidden="true"></i>
+<input type="password" placeholder="CONFIRM PASSWORD" name ="password1" value="">
+</div>
+
+
+<div class = "">
+<i class="fa fa-venus-mars" aria-hidden="true"></i>
+<select name="gender">
+  <option>Gender</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
+
+</div>
+
+<button type="submit" class="btn" >REGISTER</button>
+
+
+</form>
+
+</body>
+</html>
+-->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>.: Register :.</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css1/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css1/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body background-color="black">
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+				<form action="signup" class="login100-form validate-form flex-sb flex-w" method="post">
+					{% csrf_token %}
+					<span class="login100-form-title p-b-32">
+						Account Register
+					</span>
+
+			<h4>	<B>	<p class="txt1 p-b-13" align="center">{{err}}</p></B></h4>
+
+					<span class="txt1 p-b-11">
+						Name
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="text" name="name" required >
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<span class="txt1 p-b-11">
+						Username
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" required >
+						<span class="focus-input100"></span>
+					</div>
+
+					<span class="txt1 p-b-11">
+						Email
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="text" name="email" required >
+						<span class="focus-input100"></span>
+					</div>
+
+					<span class="txt1 p-b-11">
+						Mobile Number
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="text" name="number" required >
+						<span class="focus-input100"></span>
+					</div>
+
+					<span class="txt1 p-b-11">
+						New Password
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="password" name="password" required >
+						<span class="focus-input100"></span>
+					</div>
+
+
+
+
+					<span class="txt1 p-b-11">
+						Confirm Password
+					</span>
+					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+
+						<input class="input100" type="password" name="password1" required >
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="flex-sb-m w-full p-b-48">
+						
+
+						<div>
+
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Register
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+
+
+</body>
 </html>
