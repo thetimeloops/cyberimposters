@@ -82,7 +82,11 @@
     </tr>
   </thead>
 
+
+
+
   {%for item in myposts%}
+  {% if hide %}
   <tbody>
 
     <tr>
@@ -90,15 +94,28 @@
       <td>{{item.title}}</td>
       <td>{{item.cat}}</td>
       <td>{{item.points}}</td>
-      {% if hide %}
       <td>solved</td>
-      {% else %}
       <td><a href="blogpost/{{item.post_id}}">Solve</a></td>
-      {%endif%}
-    </tr>
-    
-  </tbody>
+</tr>
+</tbody>
+  {% endif %}
+{% if hide != "True" %}
+
+<tbody>
+
+  <tr>
+    <th scope="row">{{item.serial}}</th>
+    <td>{{item.title}}</td>
+    <td>{{item.cat}}</td>
+    <td>{{item.points}}</td>
+    <td>solved</td>
+    <td><a href="blogpost/{{item.post_id}}">Solve</a></td>
+</tr>
+</tbody>
+
+  {% endif %}
   {%endfor%}
+
 </table>
 
 

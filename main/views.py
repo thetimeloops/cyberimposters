@@ -83,13 +83,20 @@ def blogpost(request, id):
     #info = exclusive.objects.filter(username=request.user)[0]
     info = exclusive.objects.get(username=request.user)
     if request.method == "POST":
+
         flag1 = request.POST.get('flag','')
         if(flag1 == post.flags):
+            curr_id = post.post_id
             info.points = int(info.points) + int(post.points)
             info.save()
             ctf_id.append(id)
-            print(ctf_id)
-            return redirect("blog")
+            info.solvedctfid = ctf_id
+            info.save()
+            for i in range(len(ctf_id)):
+                if str(curr_id) in str(ctf_id[i]):
+                    hide=True
+                    print(hide)
+                    return render(request,"blog.html",{'hide':hide})
 
         else:
             return render(request, 'blogspot.html', {'post':post})
