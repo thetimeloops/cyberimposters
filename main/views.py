@@ -76,7 +76,6 @@ def blog(request):
     return render(request, 'blog.html', {'myposts': myposts})
 
 ctf_id=[]
-
 @login_required(login_url='/login1')
 def blogpost(request, id):
     post = Blogspot.objects.filter(post_id = id)[0]
@@ -86,21 +85,20 @@ def blogpost(request, id):
 
         flag1 = request.POST.get('flag','')
         if(flag1 == post.flags):
-            curr_id = post.post_id
-            info.points = int(info.points) + int(post.points)
-            info.save()
             ctf_id.append(id)
-            info.solvedctfid = ctf_id
-            info.save()
             for i in range(len(ctf_id)):
-                if str(curr_id) in str(ctf_id[i]):
-                    hide=True
-                    print(hide)
-                    return render(request,"blog.html",{'hide':hide})
-
-        else:
-            return render(request, 'blogspot.html', {'post':post})
-    return render(request, 'blogspot.html', {'post':post})
+                info.solvedctfid = ctf_id[i]
+                info.save()
+            curr_id = post.post_id
+            print(info.solvedctfid)
+            for i in ctf_id:
+                if exclusive.objects.filter(solvedctfid=curr_id).exists():
+                    return redirect('/')
+            else:
+                info.points = int(info.points) + int(post.points)
+                info.save()
+                return redirect("blog")
+    return render(request,"blogspot.html",{'post':post})
 
 login_required(login_url='/login1')
 def alerts(request):

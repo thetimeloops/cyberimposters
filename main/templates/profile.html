@@ -64,44 +64,43 @@
 </nav>
 
 <br>
-{% if flagfound1 %}
-<div class="alert alert-danger" role="alert">
-  Try Again
-</div>
-{% endif %}
-
+<br>
+<br>
 
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">CTF NAME</th>
-      <th scope="col">CATEGORY</th>
-      <th scope="col">POINTS</th>
-      <th scope="col">LINK</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Hacker</th>
+      <th scope="col">Points</th>
+      <th scope="col">Tier</th>
     </tr>
   </thead>
 
-
-
-
   {%for item in myposts%}
-
   <tbody>
-
+    {% if item.is_normal%}
     <tr>
-      <th scope="row">{{item.serial}}</th>
-      <td>{{item.title}}</td>
-      <td>{{item.cat}}</td>
+      <th scope="row">#</th>
+      <td>{{item.username}}</td>
       <td>{{item.points}}</td>
-      
-      <td><a href="blogpost/{{item.post_id}}">Solve</a></td>
-</tr>
+      {% if item.points <= item.low_points%}
+      <td>Noob</td>
+      {% elif item.points > item.low_points and item.points <= item.try_points%}
+      <td>amateur</td>
+      {% elif item.points > item.try_points and item.points <= item.avg_points%}
+      <td>Intermediate</td>
+      {% elif item.points > item.avg_points and item.points <= item.pro_points%}
+      <td>Pro</td>
+      {% elif item.points > item.pro_points and item.points <= item.master_points%}
+      <td>Master</td>
+      {% elif item.points > item.master_points%}
+      <td>Expert</td>
+      {%endif%}
+    </tr>
+    {%endif%}
 </tbody>
-
-
   {%endfor%}
-
 </table>
 
 

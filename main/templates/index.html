@@ -36,6 +36,64 @@
 .logotext{
   margin-top: 500%;
 }
+
+.flip-card {
+  background-color: transparent;
+  width: inherit;
+  height: inherit;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: inherit;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+@media only screen and (max-width:760px){
+
+.classes-section{
+  display: none;
+}
+
+.about-img{
+  display: none;
+}
+
+
+.f-logo{
+  display: none;
+}
+}
+
 </style>
 
 
@@ -137,39 +195,90 @@
         </div>
         <div class="container-fluid">
             <div class="row">
+
                 <div class="col-lg-3 col-sm-6">
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
                     <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/ctf.png' %}">
-
-                        <h4></h4>
+                      <h4></h4>
                         <p></p>
-
-                        <a href="#" class="primary-btn class-btn">Read More</a>
+<!--  <a href="#"  id="butt" class="primary-btn class-btn">Read More</a> -->
                     </div>
                 </div>
+
+                <div class="flip-card-back">
+                  <h1>CTFs</h1>
+                  <p>Solve and win prizes</p>
+                  <p>cfs of various kinds</p>
+                </div>
+</div></div></div>
+
+
+
                 <div class="col-lg-3 col-sm-6">
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
                     <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/linux.png' %}">
 
                         <h4></h4>
                         <p>
                         </p>
-                        <a href="#" class="primary-btn class-btn">Read More</a>
+                      <!--  <a href="#" class="primary-btn class-btn">Read More</a> -->
                     </div>
                 </div>
+                <div class="flip-card-back">
+                  <h1>Bug Bounty </h1>
+                  <p>Finds bugs in vulnerable web app.</p>
+                  <p>submit those bugs to us and earn bounty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
                 <div class="col-lg-3 col-sm-6">
-                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/coding.png' %}">
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/crypto.png' %}">
                         <h4></h4>
                         <p> </p>
-                        <a href="#" class="primary-btn class-btn">Read More</a>
+                    <!--    <a href="#" class="primary-btn class-btn">Read More</a> -->
                     </div>
                 </div>
+                <div class="flip-card-back">
+                  <h1>Crypto</h1>
+                  <p></p>
+              <p>Learn and solve crypto problems</p>
+                </div>
+                </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-lg-3 col-sm-6">
                     <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/gaming.png' %}">
                         <h4></h4>
                         <p></p>
-                        <a href="#" class="primary-btn class-btn">Read More</a>
+                        <!--<a href="#" class="primary-btn class-btn">Read More</a>-->
                     </div>
                 </div>
-
 
 
 
@@ -197,7 +306,7 @@
                         </div>
                         <p></p>
                         <div class="social-links">
-                            <h6>Follow us</h6>
+                          <u>  <h6>Follow us</h6> </u>
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-google-plus"></i></a>
@@ -208,20 +317,20 @@
                 </div>
                 <div class="col-lg-3 offset-lg-1">
                     <div class="footer-widget">
-                        <h5>Events</h5>
+                      <u>  <h5>Events</h5> </u>
                         <ul class="workout-program">
-                            <li><a href="#">CTFs</a></li>
+                            <li><a href="/blog">CTFs</a></li>
                             <li><a href="#">Coding</a></li>
-                            <li><a href="#">Bug Bounty</a></li>
+                            <li><a href="/bug">Bug Bounty</a></li>
                             <li><a href="#">IOT</a></li>
-                            <li><a href="#">Linux</a></li>
-														<li><a href="#">Gaming</a></li>
+                            <li><a href="/linux">Linux</a></li>
+														<li><a href="/games">Gaming</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="footer-widget">
-                      <h5>Services</h5>
+                      <u><h5>Services</h5></u>
                       <ul class="workout-program">
                           <li><a href="#">Paid Workshops</a></li>
                           <li><a href="#">VAPT</a></li>
@@ -233,7 +342,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="footer-widget">
-                        <h5>Contact Us</h5>
+                      <u>  <h5>Contact Us</h5> </u>
                         <ul class="footer-info">
                             <li>
                                 <i class="fa fa-phone"></i>
