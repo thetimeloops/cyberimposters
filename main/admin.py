@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import  Blogspot , exclusive , notification
+from .models import  Blogspot , exclusive , notification 
 # Register your models here.
 
 
