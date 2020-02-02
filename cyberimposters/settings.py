@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b3@y#n%v70mphllup5v%o@0rp%7zc41#(dzy8-5apmm!w#5hrz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['cyberimposters.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition

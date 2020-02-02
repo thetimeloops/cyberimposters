@@ -86,7 +86,7 @@
 
 
 	<!-- Intro section -->
-	{% for game in games %}
+
 	<section class="intro-section">
 		<div class="container">
 			<div class="row">
@@ -95,7 +95,9 @@
 						<div class="section-title text-white">
 							<h1><U>Events</U></h1>
 						</div>
+
 						<br><br><br><br>
+						{% for game in games %}
 						<h2>{{game.title}}</h2>
 
 						<div class="top-meta"> On {{game.date}}</div>
@@ -103,7 +105,9 @@
 						<p>{{game.about}}</p>
 
 						<a href="/games/regis" class="read-more">Register <img src="{% static 'img/icons/double-arrow.png' %}" alt="#"/></a>
+							{% endfor %}
 					</div>
+
 				</div>
 
 
@@ -111,7 +115,7 @@
 			</div>
 		</div>
 	</section>
-	{% endfor %}
+
 	<!-- Intro section end -->
 
 
@@ -152,7 +156,8 @@
 
 	<footer class="footer-section">
 
-			<div class="copyright"><a href="">CyberImposters</a> 2019 @ All rights reserved</div>
+			<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</div>
 		</div>
 	</footer>
 
