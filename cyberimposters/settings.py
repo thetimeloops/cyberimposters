@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bug',
     'games',
     'linux',
+    'crypto',
 ]
 
 MIDDLEWARE = [

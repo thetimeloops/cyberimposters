@@ -1,393 +1,336 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Activitar Template">
-    <meta name="keywords" content="Activitar, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+  <head>
     <title>Cyberimposters</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{% static 'css3/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/animate.css' %}">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css3/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/magnific-popup.css' %}">
 
+    <link rel="stylesheet" href="{% static 'css3/aos.css' %}">
 
-    <!-- Css Styles-->
-    <link rel="stylesheet" href="{% static 'css3/bootstrap.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/font-awesome.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/elegant-icons.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/nice-select.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/owl.carousel.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/magnific-popup.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/slicknav.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css3/style.css' %}" type="text/css">
-</head>
-<style>
+    <link rel="stylesheet" href="{% static 'css3/ionicons.min.css' %}">
 
-.logotext{
-  margin-top: 500%;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: inherit;
-  height: inherit;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: inherit;
-  height: inherit;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: inherit;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: black;
-  color: white;
-  transform: rotateY(180deg);
-}
+    <link rel="stylesheet" href="{% static 'css3/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/jquery.timepicker.css' %}">
 
 
+    <link rel="stylesheet" href="{% static 'css3/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/style.css' %}">
+  </head>
+  <body>
 
-@media only screen and (max-width:760px){
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span>CyberImposters</span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-.classes-section{
-  display: none;
-}
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="/login1" class="nav-link">Login</a></li>
+	          <li class="nav-item"><a href="/signup" class="nav-link">Register</a></li>
+	          <li class="nav-item"><a href="/ctf" class="nav-link">Join Us</a></li>
 
-.about-img{
-  display: none;
-}
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
 
-
-.f-logo{
-  display: none;
-}
-}
-
-</style>
-
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{% static '/img/cyberback.jpg' %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+          <div class="col-lg-8 ftco-animate">
+          	<div class="text w-100 text-center mb-md-5 pb-md-5">
+	            <h1 class="mb-4"></h1>
+	            <p style="font-size: 18px;"></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="logo">
-                <a href="./index.html">
-                  <!--
-                    <img src="img/logo.png" alt=""> -->
-                </a>
-            </div>
 
-            <div class="container">
-                <div class="nav-menu">
-                    <nav class="mainmenu mobile-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="/login1">Login</a></li>
-                            <li><a href="/signup">Register</a></li>
-                            <li><a href="/about">About Us</a></li>
-                          <!--  <li><a href="./blog.html"></a>
 
-                                <ul class="dropdown">
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./blog-single.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                          <li><a href="./contact.html">Contacts</a></li>-->
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
+    <section class="ftco-section ftco-no-pt bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+          	<span class="subheading"></span>
+            <h2 class="mb-2">Events</h2>
+          </div>
         </div>
-    </header>
-    <!-- Header End -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="hero-items owl-carousel">
-            <div class="single-hero-item set-bg" data-setbg="{% static 'img/cyberback.jpg' %}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="hero-text">
-                                <h2></h2>
-                                <h1></h1>
-                                <!--
-                                <a href="#" class="primary-btn">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> </div> </section>
-
-
-    <section class="home-about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <h2>WELCOME TO Cyberimposters</h2>
-                        <p class="short-details">Cyberimposters is a Cybersecurity training site which includes various department like CTFs , Bug Bounty , IOT etc.</p>
-                        <p class="long-details"> Our aim is to aware people about infosec and to train them to be safe in this cyber world.</p>
-
-                        <a href="#" class="primary-btn about-btn">Contact here for workshops! </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="{% static 'img/test.gif' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="carousel-car owl-carousel">
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url({% static 'img/portfolio/ctf.png' %});">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Capture the Flag</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat"></span>
+			    						<p class="price ml-auto"><span></span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Details</a> </p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url({% static 'img/portfolio/bug.png' %});">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Bug Bounty</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat"></span>
+			    						<p class="price ml-auto"> <span></span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Details</a> </p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url({% static 'img/portfolio/coding.png' %});">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Coding</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat"></span>
+			    						<p class="price ml-auto"><span></span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Details</a> </p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url({% static 'img/portfolio/linux.png' %});">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Linux</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat"></span>
+			    						<p class="price ml-auto"><span></span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </section>
-    <!-- About Section End -->
 
-    <!-- Classes Section Begin -->
-    <section class="classes-section">
-        <div class="class-title set-bg" data-setbg="{% static 'img/classes-title-bg.jpg' %}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 m-auto text-center">
-                        <div class="section-title pl-lg-4 pr-lg-4 pl-0 pr-0">
-                            <h2>Events We orgranize</h2>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="ftco-section ftco-about">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'img/cyberback.jpg' %});">
+					</div>
+					<div class="col-md-6 wrap-about ftco-animate">
+	          <div class="heading-section heading-section-white pl-md-5">
+	          	<span class="subheading">About us</span>
+	            <h2 class="mb-4">Welcome to Cyberimposters</h2>
+
+	            <p>Our cyberimposter team strives to provide world class cybersecurity and full VA-PT to company and orgranizations.</p>
+	            <p> besides that we provide workshops and sessions to aware people about cybersecurity</p>
+	            <p><a href="#" class="btn btn-primary py-3 px-4">Contact - Us</a></p>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="ftco-section ftco-intro" style="background-image: url({% static 'img/test.gif' %});">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-md-6 heading-section heading-section-white ftco-animate">
+            <h2 class="mb-3">Do you want to join us ? So don't be late..</h2>
+            <a href="/ctf" name="joinus"class="btn btn-primary btn-lg">Become A Imposter</a>
+          </div>
+				</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading"></span>
+            <h2 class="mb-3">Our team</h2>
+          </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
 
-                <div class="col-lg-3 col-sm-6">
-                  <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/ctf.png' %}">
-                      <h4></h4>
-                        <p></p>
-<!--  <a href="#"  id="butt" class="primary-btn class-btn">Read More</a> -->
-                    </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">.</p>
+                    <p class="name">Saumy Naman</p>
+                    <span class="position">CEO</span>
+                  </div>
                 </div>
+              </div>
 
-                <div class="flip-card-back">
-                  <h1>CTFs</h1>
-                  <p>Solve and win prizes</p>
-                  <p>cfs of various kinds</p>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url(images/person_2.jpg)">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4"></p>
+                    <p class="name">Shaksham tiwari</p>
+                    <span class="position">CFO</span>
+                  </div>
                 </div>
-</div></div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
-                <div class="col-lg-3 col-sm-6">
-                  <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/linux.png' %}">
-
-                        <h4></h4>
-                        <p>
-                        </p>
-                      <!--  <a href="#" class="primary-btn class-btn">Read More</a> -->
-                    </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Bug Bounty </h1>
-                  <p>Finds bugs in vulnerable web app.</p>
-                  <p>submit those bugs to us and earn bounty</p>
-                </div>
+    <section class="ftco-counter ftco-section img bg-light" id="section-counter">
+			<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="5">0</strong>
+                <span>Year <br>Experienced</span>
               </div>
             </div>
           </div>
-
-
-
-
-
-                <div class="col-lg-3 col-sm-6">
-                  <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/crypto.png' %}">
-                        <h4></h4>
-                        <p> </p>
-                    <!--    <a href="#" class="primary-btn class-btn">Read More</a> -->
-                    </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Crypto</h1>
-                  <p></p>
-              <p>Learn and solve crypto problems</p>
-                </div>
-                </div>
-                </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="classes-item set-bg" data-setbg="{% static 'img/portfolio/gaming.png' %}">
-                        <h4></h4>
-                        <p></p>
-                        <!--<a href="#" class="primary-btn class-btn">Read More</a>-->
-                    </div>
-                </div>
-
-
-
-
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="200">0</strong>
+                <span>Total<br>Clients</span>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="100">0</strong>
+                <span>Wokshop and <br>Sessions</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="10">0</strong>
+                <span>Events <br></span>
+              </div>
+            </div>
+          </div>
         </div>
+    	</div>
     </section>
-    <!-- Classes Section End -->
 
-
-
-
-
-
-
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="footer-logo-item">
-                        <div class="f-logo">
-                            <a href="#"><img src="{% static 'img/cyberback.jpg' %}" alt=""></a>
-                        </div>
-                        <p></p>
-                        <div class="social-links">
-                          <u>  <h6>Follow us</h6> </u>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1">
-                    <div class="footer-widget">
-                      <u>  <h5>Events</h5> </u>
-                        <ul class="workout-program">
-                            <li><a href="/blog">CTFs</a></li>
-                            <li><a href="#">Coding</a></li>
-                            <li><a href="/bug">Bug Bounty</a></li>
-                            <li><a href="#">IOT</a></li>
-                            <li><a href="/linux">Linux</a></li>
-														<li><a href="/games">Gaming</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                      <u><h5>Services</h5></u>
-                      <ul class="workout-program">
-                          <li><a href="#">Paid Workshops</a></li>
-                          <li><a href="#">VAPT</a></li>
-                          <li><a href="#">Web Development</a></li>
-                          <li><a href="#">Event Management</a></li>
-                          <li><a href="#"></a></li>
-                      </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer-widget">
-                      <u>  <h5>Contact Us</h5> </u>
-                        <ul class="footer-info">
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <span>Phone:</span>
-                                7348317889
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope-o"></i>
-                                <span>Email:</span>
-                                cyberimposters.19@gmail.com
-                            </li>
-                            <li>
-                                <i class="fa fa-map-marker"></i>
-                                <span>Address</span>
-                                GLA University , Mathura
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"><a href="#" class="logo"><span>CyberImposters</span></a></h2>
+              <p>World in safe hands! best cybersecurity provider across various platforms.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
             </div>
-        </div>
-        <div class="copyright-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
-                    </div>
-                </div>
+          </div>
+
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">About- Us</a></li>
+                <li><a href="#" class="py-2 d-block">How it works</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">GLA University , Mathura Startup launchpad</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">7348317889</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">admin@cyberimposters.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
     </footer>
-    <!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="{% static 'js1/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js1/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js1/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'js1/mixitup.min.js' %}"></script>
-    <script src="{% static 'js1/jquery.nice-select.min.js' %}"></script>
-    <script src="{% static 'js1/jquery.slicknav.js' %}"></script>
-    <script src="{% static 'js1/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js1/masonry.pkgd.min.js' %}"></script>
-    <script src="{% static 'js1/main.js' %}"></script>
-</body>
 
+
+  <!-- loader
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+-->
+
+  <script src="{% static 'js1/jquery.min.js' %}"></script>
+  <script src="{% static 'js1/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js1/popper.min.js' %}"></script>
+  <script src="{% static 'js1/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js1/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js1/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js1/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js1/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js1/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js1/aos.js' %}"></script>
+  <script src="{% static 'js1/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js1/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js1/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js1/scrollax.min.js' %}"></script>
+
+  <script src="{% static 'js1/google-map.js' %}"></script>
+  <script src="{% static 'js1/main.js' %}"></script>
+
+  </body>
 </html>
