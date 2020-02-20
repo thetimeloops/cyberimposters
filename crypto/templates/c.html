@@ -110,27 +110,32 @@
                     </div>
                 </div>
             </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="program_detail_wrap">
                         <div class="single_propram">
                             <div class="inner_wrap">
                                 <div class="circle_img"></div>
+                                {% for post in all %}
+
                                 <div class="porgram_top">
-                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Inroduction to Cryptography</span>
-                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
+                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">{{post.title}}</span>
+                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">{{post.pub_date}}</h4>
                                 </div>
                                 <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <img src="{% static 'img/program_details/1.jpeg' %}" alt="">
+                                    <img src="/up_images/{{post.crypto_pic}}/" alt="">
                                 </div>
-                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Read</h4>
+                              <a href="blogcrypto/{{post.post_id}}">  <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Read</h4> </a>
                             </div>
+
                         </div>
+                        <!--
                         <div class="single_propram">
                             <div class="inner_wrap">
                                 <div class="circle_img"></div>
                                 <div class="porgram_top">
-                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">introduction to AES</span>
+                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">{{post.title}}</span>
                                     <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
@@ -139,7 +144,8 @@
                                 <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Read</h4>
                             </div>
                         </div>
-
+                      -->
+                        {%endfor%}
                     </div>
                 </div>
             </div>

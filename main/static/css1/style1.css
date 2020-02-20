@@ -1,3 +1,4 @@
+
 h1{
   font-family: cursive;
   color: red;
@@ -89,7 +90,7 @@ flag:focus {
 }
 
 
-/* Full-width input fields */
+
 .xyz{
   width: 100%;
   padding: 12px 20px;
@@ -104,8 +105,7 @@ flag:focus {
   font-size: 16px;
   color: green;
 }
-/* Set a style
- for all buttons */
+
 
 
 

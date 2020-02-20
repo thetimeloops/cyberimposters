@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('',views.linux,name="linux"),
-    path('bloglinux/<int:id>',views.bloglinux,name="bloglinux")
+    path('bloglinux/<int:id>',views.bloglinux,name="bloglinux"),
+    
 ]

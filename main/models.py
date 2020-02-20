@@ -14,6 +14,7 @@ class Blogspot(models.Model):
     cat = models.CharField(max_length=200,default="")
     points = models.CharField(max_length=50 , default="")
     pub_date = models.DateField()
+    ctffile=models.FileField(upload_to='ctfs/',null=True)
     is_solved = models.BooleanField(default=False)
 
     def __str__(self):
