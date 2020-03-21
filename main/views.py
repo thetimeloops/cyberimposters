@@ -49,6 +49,10 @@ def signup(request):
         gender = request.POST.get('gender','')
         phone = request.POST.get('number','')
 
+
+
+
+
         if password == password1:
             if User.objects.filter(email=email).exists():
                 err = "Email Already exists"
@@ -99,7 +103,9 @@ def blogpost(request, id):
     return render(request,"blogspot.html",{'post':post})
 
 login_required(login_url='/login1')
+opened = False
 def alerts(request):
+    opened=True
     noti = notification.objects.all()
     count = notification.objects.all().count()
     return render(request,"alert.html",{'noti':noti})
@@ -116,3 +122,12 @@ def logout(request):
 def profile(request):
     myposts = exclusive.objects.all()
     return render(request,"profile.html",{'myposts':myposts})
+
+
+@login_required(login_url='/login1')
+def scan(request):
+    if request.method=="POST":
+        site_link = request.POST.get('link_site','')
+        expectation = request.POST.get('expect_us','')
+        return render(request,"scan.html")
+    return render(request,"scan.html")

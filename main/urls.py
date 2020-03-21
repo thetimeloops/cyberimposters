@@ -12,6 +12,7 @@ urlpatterns = [
     path("check_flag",views.check_flag,name="check_flag"),
     path('profile',views.profile,name="profile"),
     path('alerts',views.alerts,name="alert"),
-    path('logout',views.logout,name="logout")
+    path('logout',views.logout,name="logout"),
+    path('scan',views.scan,name="scan"),
 
 ]

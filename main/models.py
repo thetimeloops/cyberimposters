@@ -34,6 +34,9 @@ class exclusive(models.Model):
     pro_points = models.CharField(max_length=10,default="300")
     master_points = models.CharField(max_length=10,default="500")
     is_normal = models.BooleanField(default=True)
+    
+
+
     solvedctfid = models.ManyToManyField("self")
 
     @property

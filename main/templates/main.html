@@ -55,6 +55,37 @@
       </script>
 
 
+<style>
+.notification {
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  border-color: white;
+  background-color: inherit;
+  border: 2px solid white;
+}
+
+.notification:hover {
+  background-color: rgb(3, 196, 235);
+  color: white;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 30%;
+  background-color: black;
+  color: white;
+}
+</style>
+
+
+
 </head>
 
 <body>
@@ -70,11 +101,18 @@
 
         </div>
 
-        <h1>Welcome to CyberImposters</h1>
-        <h2>We Provide <span class="rotating">Cybersecurity Solutions , Cybersecurity Training , Paid sessions and Workshops</span></h2>
+        <h1>Welcome {{request.user.username}}</h1>
+        <h2> To CyberImposters </h2>
+    <!--  <h2>Check <span class="rotating">Notifications, Messages , and Play Events</span></h2>-->
         <div class="actions">
-          <a href="#about" class="btn-get-started">Get Started</a>
-          <a href="#services" class="btn-services">Our Services</a>
+
+<a href="/alerts" class="notification">
+  <span>Notifications</span>
+  <span class="badge">{{count}}</span>
+</a>
+        <!--  <a href="/alerts" class="btn-get-started">Notifications</a> -->
+
+          <a href="#services" class="btn-services">Timeline</a>
         </div>
       </div>
     </div>
@@ -95,9 +133,9 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Events</a></li>
-          <li><a href="/ctf">Join Us</a></li>
+          <li><a href="#services">Messages</a></li>
+          <li><a href="#portfolio">Ranking</a></li>
+          <li><a href="/ctf">Profile</a></li>
           <li><a href="/logout">logout</a></li>
 
         </ul>
@@ -114,7 +152,7 @@
 
   <!--==========================
   Services Section
-  ============================-->
+  ============================
   <section id="services">
     <div class="container wow fadeInUp">
       <div class="row">
@@ -159,7 +197,7 @@
       </div>
     </div>
   </section>
-
+-->
   <!--==========================
   Subscrbe Section
   ============================-->
@@ -171,7 +209,7 @@
           <p class="subscribe-text">Get your website/API/application checked by our best cybersecurity researchers!!</p>
         </div>
         <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" onclick="soon()">Check now</a>
+          <a class="subscribe-btn" href="/scan">Check now</a>
         </div>
       </div>
     </div>
@@ -226,7 +264,7 @@
             </div>
           </a>
         </div>
-<!--
+
         <div class="col-md-3">
           <a class="portfolio-item" style="background-image: url({% static 'img/portfolio/bug.png' %});" href="/bug">
             <div class="details">
@@ -237,7 +275,7 @@
         </div>
 
 
--->
+
 
 
       </div>

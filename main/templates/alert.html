@@ -1,52 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <title>:.CyberImposters.:</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css4/style.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+
+  ======================================================= -->
+
+  <script>
+   function soon()
+      {
+        alert("Coming Soon");
+      }
+      </script>
+
+
+<style>
+.notification {
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  border-color: white;
+  background-color: inherit;
+  border: 2px solid white;
+}
+
+.notification:hover {
+  background-color: rgb(3, 196, 235);
+  color: white;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 30%;
+  background-color: black;
+  color: white;
+}
+</style>
+
+
+
+</head>
 
 <body>
+  <div id="preloader"></div>
+<!--
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="#">CyberImposters</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/main">Home <span class="sr-only"></span></a>
-    </li>
+        </div>
+
+        <h1>Welcome {{request.user.username}}</h1>
+        <h2> To CyberImposters </h2>
+     <h2>Check <span class="rotating">Notifications, Messages , and Play Events</span></h2>
+        <div class="actions">
+
+<a href="/alerts" class="notification">
+  <span>Notifications</span>
+  <span class="badge">{{count}}</span>
+</a>
+        <a href="/alerts" class="btn-get-started">Notifications</a>
+
+          <a href="#services" class="btn-services">Timeline</a>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h2 class="subscribe-title">Notifications</h3>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/main">Home</a></li>
+          <li><a href="#services">Messages</a></li>
+          <li><a href="#portfolio">Ranking</a></li>
+          <li><a href="/ctf">Profile</a></li>
+          <li><a href="/logout">logout</a></li>
+
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <!--==========================
+  About Section
+  ============================-->
 
 
-  </ul>
-  <form class="form-inline my-2 my-lg-0">
-    <a class="navbar-brand" href="#">Notifications</a>
+  <!--==========================
+  Services Section
+  ============================
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Our Services</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">List of various services provided by CyberImposters</p>
+        </div>
+      </div>
 
-  </form>
-</div>
-</nav>
+      <div class="row">
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-desktop"></i></div>
+          <h4 class="service-title"><a href="">Vulnerability Assessment</a></h4>
+          <p class="service-description">We provide full VA-PT for your Website / API / Application / Servers .</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-bar-chart"></i></div>
+          <h4 class="service-title"><a href="">Customized Reports</a></h4>
+          <p class="service-description">we provide reports in the most simplest and dynamic format !.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-phone"></i></div>
+          <h4 class="service-title"><a href="">24x7 Technical Support</a></h4>
+          <p class="service-description">No Bots ! Skilled researchers on Realtime chat support.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa  fa-motorcycle"></i></div>
+          <h4 class="service-title"><a href="">Distant Workshop and sessions</a></h4>
+          <p class="service-description">We provide a full fledged enviroment on our cybersecurity sessions and hands on experience on ethical hacking workshops.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-mortar-board"></i></div>
+          <h4 class="service-title"><a href="">Cybersecurity Training</a></h4>
+          <p class="service-description">We also provide cybersecurity practices and ethical hacking ways to become a good white hat hacker.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-money"></i></div>
+          <h4 class="service-title"><a href="">Various Competitions and events</a></h4>
+          <p class="service-description">We also host Cybersecurity events and Competitions with prize money and rewards. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <!--==========================
+  Subscrbe Section
+  ============================-->
+
+
+
+<!--
+
+  <div class="alert alert-primary" role="alert">
+    <small>notification posted on {{item.pub_date}}</small>
+    <br>
+    <h4></h4>
+  </div>
+
+
+-->
+
 
 {%for item in noti%}
-<div class="alert alert-primary" role="alert">
-  <small>notification posted on {{item.pub_date}}</small>
-  <br>
-  <h4>{{item.body}}</h4>
-</div>
 
+<h2>
+<div class="card">
+  <div class="card-body">
+    <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">posted on {{item.pub_date}}</h4>
+    <p>{{item.body}}</p>
+    <hr>
+    
+    </div>
+  </div>
+</div>
+</h2>
 {%endfor%}
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.js' %}"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="{% static 'js2/custom.js' %}"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>
+
+
 
 
 </body>
